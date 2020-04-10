@@ -12,6 +12,8 @@ Comandos utilizados:
     default new App();_**
   - Adicionar também o comando **"scripts":{ "start": "nodemon
     caminhoArquivoIndex.js"}** no arquivo **package.json**
+  - Depois criar o arquivo **nodemon.json** e adicionar os comandos **{
+    "execMap": { "js": "sucrase-node" } }**
 - **(yarn add express nunjucks)** - Utilizado para adicionar as dependências
   **Express** e **Nunjucks**.
 - **(yarn add eslint -D)** - Utilizado para adicionar a dependência **ESLint**.
