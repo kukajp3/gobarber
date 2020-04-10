@@ -8,8 +8,8 @@ Comandos utilizados:
 - **(yarn add sucrase nodemon -D)** - Utilizado para adicionar a dependência
   **Nodemon** e **Sucrase**.
   - O Sucrase possibilita a utilização de _imports_ e _exports_ em vez de
-    utilizar _require_. Por exemplo: _import app from './app';_ e _export
-    default new App();_
+    utilizar _require_. Por exemplo: **_import app from './app';_** e **_export
+    default new App();_**
   - Adicionar também o comando **"scripts":{ "start": "nodemon
     caminhoArquivoIndex.js"}** no arquivo **package.json**
 - **(yarn add express nunjucks)** - Utilizado para adicionar as dependências
