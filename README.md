@@ -9,11 +9,12 @@ Comandos utilizados:
   **Nodemon** e **Sucrase**.
   - O Sucrase possibilita a utilização de _imports_ e _exports_ em vez de
     utilizar _require_. Por exemplo: **_import app from './app';_** e **_export
-    default new App();_**
+    default new App();_**.
   - Adicionar também o comando **"scripts":{ "start": "nodemon
-    caminhoArquivoIndex.js"}** no arquivo **package.json**
+    caminhoArquivoIndex.js"}** no arquivo **package.json**.
   - Depois criar o arquivo **nodemon.json** e adicionar os comandos **{
-    "execMap": { "js": "sucrase-node" } }**
+    "execMap": { "js": "sucrase-node" } }**.
+  - Para rodar, utilizar o comando **yarn start** no terminal.
 - **(yarn add express nunjucks)** - Utilizado para adicionar as dependências
   **Express** e **Nunjucks**.
 - **(yarn add eslint -D)** - Utilizado para adicionar a dependência **ESLint**.
