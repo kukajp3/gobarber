@@ -16,6 +16,7 @@ class User extends Model {
       }
     );
 
+    // Criptografa a senha antes de adicionar o usuário no banco.
     this.addHook('beforeSave', async (user) => {
       if (user.password) {
         user.password_hash = await bcryptjs.hash(user.password, 8);
@@ -23,6 +24,11 @@ class User extends Model {
     });
 
     return this;
+  }
+
+  // Verifica se a senha informada é igual a senha cadastrada do usuário.
+  checkPassword(password) {
+    return bcryptjs.compare(password, this.password_hash);
   }
 }
 

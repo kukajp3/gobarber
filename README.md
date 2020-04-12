@@ -23,3 +23,5 @@ Comandos utilizados:
   - **(yarn sequelize migration:create --name=create-users)** - Utilizado para criar o migration do **Sequelize**.
   - **(yarn sequelize db:migrate)** - Executa as migrations. O local das migrations é buscado no arquivo '.sequelizerc'.
 - **(yarn add bcryptjs)** - Utilizado para adicionar a dependência **bcryptjs** que será usado na geração de senhas hash.
+- **(yarn add jsonwebtoken)** - Utilizado para adicionar a dependência **JWT** que será usado na geração de um token de sessão.
+- **(yarn add yup)** - Utilizado para adicionar a dependência **yup** responsável por validar campos, por exemplo: O campo 'nome' terá no mínimo 6 letras.
