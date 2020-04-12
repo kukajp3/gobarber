@@ -22,3 +22,4 @@ Comandos utilizados:
 - **(yarn add sequelize-cli -D)** - Utilizado para adicionar a dependência **Sequelize-Cli**.
   - **(yarn sequelize migration:create --name=create-users)** - Utilizado para criar o migration do **Sequelize**.
   - **(yarn sequelize db:migrate)** - Executa as migrations. O local das migrations é buscado no arquivo '.sequelizerc'.
+- **(yarn add bcryptjs)** - Utilizado para adicionar a dependência **bcryptjs** que será usado na geração de senhas hash.
