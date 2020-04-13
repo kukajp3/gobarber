@@ -25,3 +25,4 @@ Comandos utilizados:
 - **(yarn add bcryptjs)** - Utilizado para adicionar a dependência **bcryptjs** que será usado na geração de senhas hash.
 - **(yarn add jsonwebtoken)** - Utilizado para adicionar a dependência **JWT** que será usado na geração de um token de sessão.
 - **(yarn add yup)** - Utilizado para adicionar a dependência **yup** responsável por validar campos, por exemplo: O campo 'nome' terá no mínimo 6 letras.
+- **(yarn add multer)** - Utilizado para adicionar a dependência **Multer**.
