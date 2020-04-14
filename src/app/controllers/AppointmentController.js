@@ -42,13 +42,14 @@ class AppointmentController {
       },
     });
 
+    // Verifica se não tem agendamento para o horário marcado.
     if (isAvailabilityDate) {
       return res
         .status(400)
         .json({ error: 'Appointment date is not available!' });
     }
 
-    // Caso passe nas verificações, o serviço é criado.
+    // Caso passe nas validações, o agendamento é criado.
     const appointment = await Appointment.create({
       user_id: req.userId,
       provider_id,
