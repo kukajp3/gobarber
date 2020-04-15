@@ -1,8 +1,11 @@
 import * as yup from 'yup';
-import { startOfHour, parseISO, isBefore } from 'date-fns';
+import { startOfHour, parseISO, isBefore, format } from 'date-fns';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
+import Notification from '../schemas/Notification';
+
+// import pt from 'date-fns/locale/pt';
 
 class AppointmentController {
   async index(req, res) {
@@ -55,6 +58,10 @@ class AppointmentController {
         .json({ error: 'You can only create appointments with providers!' });
     }
 
+    if (req.userId === provider_id) {
+      return res.status(401).json({ error: 'User logged is equal provider!' });
+    }
+
     const hourStart = startOfHour(parseISO(date));
 
     // Verifica se a data passada é menor que a data atual, caso seja, é retornado um erro.
@@ -82,6 +89,18 @@ class AppointmentController {
       user_id: req.userId,
       provider_id,
       date,
+    });
+
+    const user = await User.findByPk(req.userId);
+    const formattedDate = format(
+      hourStart,
+      "MMMM dd 'at' H:mm"
+      // locale: pt  (para deixar formatado em português)
+    );
+
+    await Notification.create({
+      content: `New appointment of ${user.name} for the ${formattedDate}`,
+      user: provider_id,
     });
 
     return res.json(appointment);
