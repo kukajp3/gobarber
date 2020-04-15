@@ -17,6 +17,7 @@ Comandos utilizados:
   - **(yarn eslint --init)** - Utilizado para configurar o **ESLint**.
   - **(yarn add prettier eslint-config-prettier eslint-plugin-prettier -D)** - Utilizado para adicionar o **Prettier** e as as configurações com o **ESLint**.
   - **(yarn eslint --fix src --ext .js)** - Corrige os erros dos arquivos .js através do **ESLint**.
+- **(docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres)** - Instala a imagem do Postgres no Docker para a utilização junto com o PostBird.
 - **(yarn add pg pg-hstore)** - Utilizado para adicionar a dependência **Postgres**.
 - **(yarn add sequelize)** - Utilizado para adicionar a dependência **Sequelize**.
 - **(yarn add sequelize-cli -D)** - Utilizado para adicionar a dependência **Sequelize-Cli**.
@@ -27,3 +28,5 @@ Comandos utilizados:
 - **(yarn add yup)** - Utilizado para adicionar a dependência **yup** responsável por validar campos, por exemplo: O campo 'nome' terá no mínimo 6 letras.
 - **(yarn add multer)** - Utilizado para adicionar a dependência **Multer**.
 - **(yarn add date-fns@next)** - Utilizado para adicionar a dependência **Date-fns** responsável por manipular melhor as datas.
+- **(yarn add mongoose)** - Utilizado para adicionar a dependência **Mongoose** responsável pela manipulação dos dados junto com o MongoDB.
+- **(docker run --name mongobarber -p 27017:27017 -d -t mongo)** - Instala a imagem do Mongo no Docker para a utilização junto com o Mongo Compass.
