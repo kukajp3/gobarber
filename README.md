@@ -33,3 +33,4 @@ Comandos utilizados:
 - **(yarn add nodemailer)** - Utilizado para adicionar a dependência **NodeMailer** responsável pelo envio de email.
 - **(yarn add express-handlebars)** - Utilizado para adicionar a dependência **HandleBars** responsável pelo template do email.
 - **(yarn add nodemailer-express-handlebars)** - Utilizado para adicionar a dependência responsável pela comunicação entre o nodemailer e o handlebars.
+- **(yarn add bee-queue)** - Utilizado para adicionar a dependência **Bee Queue** responsável pela fila de emails.
