@@ -30,3 +30,6 @@ Comandos utilizados:
 - **(yarn add date-fns@next)** - Utilizado para adicionar a dependência **Date-fns** responsável por manipular melhor as datas.
 - **(yarn add mongoose)** - Utilizado para adicionar a dependência **Mongoose** responsável pela manipulação dos dados junto com o MongoDB.
 - **(docker run --name mongobarber -p 27017:27017 -d -t mongo)** - Instala a imagem do Mongo no Docker para a utilização junto com o Mongo Compass.
+- **(yarn add nodemailer)** - Utilizado para adicionar a dependência **NodeMailer** responsável pelo envio de email.
+- **(yarn add express-handlebars)** - Utilizado para adicionar a dependência **HandleBars** responsável pelo template do email.
+- **(yarn add nodemailer-express-handlebars)** - Utilizado para adicionar a dependência responsável pela comunicação entre o nodemailer e o handlebars.
