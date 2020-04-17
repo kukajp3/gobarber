@@ -33,4 +33,9 @@ Comandos utilizados:
 - **(yarn add nodemailer)** - Utilizado para adicionar a dependência **NodeMailer** responsável pelo envio de email.
 - **(yarn add express-handlebars)** - Utilizado para adicionar a dependência **HandleBars** responsável pelo template do email.
 - **(yarn add nodemailer-express-handlebars)** - Utilizado para adicionar a dependência responsável pela comunicação entre o nodemailer e o handlebars.
+- **(docker run --name redisgobarber -p 6379:6379 -d -t redis:alpine)** - Instala a imagem do Redis no Docker para a utilizar no armazenamento de emails para melhorar o desempenho.
 - **(yarn add bee-queue)** - Utilizado para adicionar a dependência **Bee Queue** responsável pela fila de emails.
+- **(yarn add @sentry/node@5.15.4)** - Utilizado para adicionar a dependência **Sentry** responsável pela captura e manipulação dos erros da aplicação.
+- **(yarn add express-async-erros)** - Utilizado para adicionar a dependência **express-async-erros**.
+- **(yarn add youch)** - Utilizado para adicionar a dependência **Youch** responsável pelo tratamento das mensagens de erros.
+- **(yarn add dotenv)** - Utilizado para adicionar a dependência **dotenv** para utilizar as variáveis globais do arquivo _.env_.
