@@ -35,11 +35,11 @@ class AppointmentController {
           },
         ],
       });
+      return res.json(appointments);
     }catch(e){
       console.log(e)
       return res.json({error: e.message});
     }
-    return res.json(appointments);
   }
 
   async store(req, res) {
