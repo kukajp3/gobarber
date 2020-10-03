@@ -13,27 +13,32 @@ class AppointmentController {
   async index(req, res) {
     const { page = 1 } = req.query;
 
-    const appointments = await Appointment.findAll({
-      where: { user_id: req.userId, canceled_at: null },
-      order: ['date'],
-      attributes: ['id', 'date', 'past', 'cancelable'],
-      limit: 20,
-      offset: (page - 1) * 20,
-      include: [
-        {
-          model: User,
-          as: 'provider',
-          attributes: ['id', 'name'],
-          include: [
-            {
-              model: File,
-              as: 'avatar',
-              attributes: ['id', 'path', 'url'],
-            },
-          ],
-        },
-      ],
-    });
+    try{
+      const appointments = await Appointment.findAll({
+        where: { user_id: req.userId, canceled_at: null },
+        order: ['date'],
+        attributes: ['id', 'date', 'past', 'cancelable'],
+        limit: 20,
+        offset: (page - 1) * 20,
+        include: [
+          {
+            model: User,
+            as: 'provider',
+            attributes: ['id', 'name'],
+            include: [
+              {
+                model: File,
+                as: 'avatar',
+                attributes: ['id', 'path', 'url'],
+              },
+            ],
+          },
+        ],
+      });
+    }catch(e){
+      console.log(e)
+      return res.json({error: e.message});
+    }
     return res.json(appointments);
   }
 
